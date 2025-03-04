@@ -7,14 +7,17 @@ from langchain.schema import SystemMessage, HumanMessage
 from deep_translator import GoogleTranslator
 from datetime import datetime
 
-# Set up the API key path dynamically
+'''# Set up the API key path dynamically
 base = os.path.dirname(os.path.abspath(__file__))
 file = os.path.join(base, "keys", "gemini.txt")  
 
 # Load API key
 with open(file, "r") as f:
     key = f.read().strip()
-    os.environ["GOOGLE_API_KEY"] = key  # Set environment variable
+    os.environ["GOOGLE_API_KEY"] = key  # Set environment variable'''
+
+# Load API key from Streamlit Secrets
+key = st.secrets["api"]["key"]
 
 
 # Configure Google Generative AI
