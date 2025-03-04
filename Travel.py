@@ -37,6 +37,7 @@ def get_travel_plan(source, destination, travel_mode, travel_preference, languag
         Also, check for ticket availability for trains and flights on the given date.
         Suggest related websites or apps where users can get more details.
         Include estimated travel time, cost, and comfort level.
+        if any user put something outside source and destination name, politely decline.
         """)
     ]
     response = model.invoke(messages)
